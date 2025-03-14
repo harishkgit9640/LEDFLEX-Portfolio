@@ -480,7 +480,7 @@ section {
 .subscription-form .form-title {
     font-size: 15px;
     font-weight: 500;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .modal .close {
@@ -505,10 +505,6 @@ section {
     margin-bottom: 15px;
 }
 
-.subscription-form form .textarea {
-    height: 80px;
-    width: 100%;
-}
 
 .subscription-form form .name {
     margin-right: 10px;
@@ -519,7 +515,7 @@ section {
 }
 
 .subscription-form form .field input,
-.subscription-form form .textarea textarea {
+.subscription-form form .field select {
     height: 100%;
     width: 100%;
     outline: none;
@@ -530,15 +526,9 @@ section {
 }
 
 .subscription-form form .field input:focus,
-.subscription-form form .field textarea:focus {
+.subscription-form form .field select:focus {
     border: 1px solid var(--theme-color);
-    color: var(--theme-color);
     font-weight: 500;
-}
-
-.subscription-form form .textarea textarea {
-    padding-top: 10px;
-    resize: none;
 }
 
 .subscription-form .button {
