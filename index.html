@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Group</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SMTP EMAIL -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Charm&family=Montserrat:wght@300&family=Poppins:ital,wght@0,400;0,600;0,700;0,900;1,800&&family=Roboto:ital@0;1&family=Tangerine&family=Wallpoet&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- back to top -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"> <a href="#index.html"> LED<span>FLEX</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home section Start -->
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-typing"> <span class="typing"></span> </div>
+                <div class="text-1"> The LEDFlex portfolio consists of a diverse range of luminaires suitable for every
+                    application. To be globally recognised for sustainable premium linear lighting systems that inspire
+                    creativity while raising the benchmark for customer service excellence.</div>
+                <a href="#services">Get Started </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section Start -->
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <div class="title"> About Us</div>
+            <div class="about-content">
+                <div class="column-left">
+                    <img src="assets/about.jpg" alt="about_img">
+                </div>
+
+                <div class="column-right">
+                    <div class="about-title">Premium Linear Lighting</div>
+                    <p>At LEDFlex Group, we are not just lighting manufacturers, we collaborate with lighting designers
+                        to transcend boundaries and turn visionary concepts into tangible realities. Bespoke brilliance
+                        is our hallmark. Specializing in premium linear LED solutions built with cutting-edge
+                        technology, we tailor our products to meet the unique requirements of each project. With a focus
+                        on innovation and a commitment to excellence, we redefine the landscape of lighting in the
+                        industry.However, our commitment extends far beyond the product. Supported by our in-house team
+                        of engineers and technical experts, we are able to offer comprehensive support throughout your
+                        entire journey, from design and installation guidance to after-sales support. Our global network
+                        further ensures seamless support wherever your project takes you. </p>
+                    <a href="#services"> Our Services</a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- services section Start -->
+
+    <section class="services" id="services">
+        <div class="max-width">
+            <div class="title"> Our services</div>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="text">Graphics Design</div>
+                        <p>Providing self made Illustration design. And also we have various types of design templates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="text">Advertising</div>
+                        <p>Providing some of the most Powerful Techniques of Marketing to Optimise their startup in the
+                            quickest.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">Web Development</div>
+                        <p> Self Coded Responsive Websites also make a Websites According to the customer requirement
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter section Start -->
+
+    <section class="newsletter">
+        <div class="max-width">
+            <h3 class="newsLatter-title">Subscribe to our Newsletter</h3>
+            <p>Get exclusive access to our latest product launches, exciting projects and company announcements</p>
+            <button class="news_btn modal-btn" id="showModal">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- form Modal -->
+
+    <div id="newsletterModal" class="modal">
+        <div class="modal-content">
+            <div class="subscribe-image">
+                <span class="close" id="closeModal">&times;</span>
+                <img src="/assets/about.jpg" alt="Newsletter">
+            </div>
+            <div class="subscription-form">
+                <form action="">
+                    <div class="field">
+                        <div class="field name">
+                            <input type="text" placeholder="Name" name="name" id="user_input" required>
+                        </div>
+                        <div class="field email">
+                            <input type="text" placeholder="Email" name="email" id="email_input" required>
+                        </div>
+                    </div>
+                    <div class="field subject">
+                        <input type="text" placeholder="Subject" name="subject" id="subject_input" required>
+                    </div>
+
+                    <div class="field textarea">
+                        <textarea name="message" cols="30" rows="10" id="message_input"
+                            placeholder="Describe you Message..."></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit" name="submit" id="submit" onclick="sendEmail(event)">Submit <i
+                                class="fa fa-paper-plane"></i> </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <span>Developed By <a href="#home"> Harish Kumar </a> | &copy; <span id="year">2025</span> All Rights Reserved.
+        </span>
+    </footer>
+
+</body>
+<script src="main.js"></script>
+
+</html>
