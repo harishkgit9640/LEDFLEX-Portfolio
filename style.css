@@ -377,43 +377,95 @@ section {
     color: var(--theme-color);
 }
 
-/* ========= Modal section styling ========== */
+/* ========= newsletter section styling ========== */
+
+.news_btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--text-color);
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.news_btn:hover {
+    background: var(--text-color);
+    color: var(--theme-color);
+}
 
 .modal {
-    /* display: none; */
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    display: none;
     justify-content: center;
     align-items: center;
-    /* z-index: 10; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal-content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
-    background: var(--primary-bg-color);
-    padding: 20px;
+    width: 700px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
 }
 
-.modal img {
+.subscribe-image {
+    width: calc(100% - 400px);
+    height: 400px;
+    background: #fff;
+}
+
+.subscribe-image img {
     width: 100%;
-    /* border-radius: 5px; */
+    height: 100%;
 }
 
-.modal-content .close {
+.subscription-form {
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscription-form .form-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.modal .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
+    top: -25px;
+    right: -20px;
+    font-size: 25px;
     cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+
 }
 
 .subscription-form form .field {
@@ -643,20 +695,32 @@ footer span a:hover {
         margin-bottom: 20px;
     }
 
+    .modal-content {
+        max-width: 400px;
+    }
+
 }
 
 @media (max-width: 500px) {
 
     .home .home-content .text-typing {
-        font-size: 45px;
+        font-size: 40px;
     }
 
-    .home .home-content .text-3 {
-        font-size: 25px;
+    .home .home-content .text-1 {
+        font-size: 18px;
         margin: 5px 0;
+    }
+
+    .home .home-content a {
+        font-size: 14px;
     }
 
     .services .title::after {
         font-size: 16px;
+    }
+
+    .newsletter .newsLatter-title {
+        font-size: 32px;
     }
 }

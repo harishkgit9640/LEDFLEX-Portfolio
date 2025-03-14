@@ -40,11 +40,14 @@ $(document).ready(function () {
 
     // Open modal when clicked on Subscribe button
     $('#showModal').click(function () {
+        $("#newsletterModal").css("display", "flex");
         $(".modal").show();
+        $(".modal").addClass("show");
     });
     // close modal when clicked X
     $('#closeModal').click(function () {
         $(".modal").hide();
+        $(".modal").removeClass("show");
     });
 
 
