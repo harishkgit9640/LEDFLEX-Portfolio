@@ -1,16 +1,6 @@
-.regular-fonts {
-    font-family: "Montserrat", sans-serif;
-    font-family: "Roboto", sans-serif;
-    font-family: "Poppins", sans-serif;
-    font-family: "Wallpoet", sans-serif;
-    font-family: "Charm", cursive;
-    font-family: "Tangerine", cursive;
-    font-weight: 400;
-}
-
 /* color variables */
 :root {
-    --theme-color: #d43906;
+    --theme-color: #ff3c00;
     --primary-bg-color: #1f242d;
     --second-bg-color: #111;
     --text-color: #ffffff;
@@ -77,12 +67,20 @@ html {
 }
 
 .navbar.sticky .menu li:hover a {
-    color: var(--primary-bg-color);
+    color: var(--text-color);
+}
+
+.navbar.sticky .menu .dropdown-menu li:hover a {
+    color: var(--theme-color);
 }
 
 .navbar .menu li {
     list-style: none;
     display: inline-block;
+}
+
+.navbar .menu li {
+    position: relative;
 }
 
 .navbar .menu li a {
@@ -96,6 +94,30 @@ html {
 
 .navbar .menu li a:hover {
     color: var(--theme-color);
+}
+
+
+.navbar .menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary-bg-color);
+    list-style: none;
+    border-radius: 5px;
+}
+
+.navbar .menu .dropdown-menu li {
+    width: 150px;
+}
+
+.navbar .menu .dropdown-menu a {
+    display: block;
+    padding: 10px;
+}
+
+.navbar .menu .dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /* menu btn styling start */
@@ -425,7 +447,7 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 700px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-20px);
     transition: transform 0.3s ease;
@@ -435,11 +457,14 @@ section {
     width: calc(100% - 400px);
     height: 400px;
     background: #fff;
+    border-radius: 5px 0 0 5px;
 }
 
 .subscribe-image img {
     width: 100%;
     height: 100%;
+    border-radius: 5px 0 0 5px;
+
 }
 
 .subscription-form {
@@ -449,6 +474,7 @@ section {
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
+    border-radius: 0 5px 5px 0;
 }
 
 .subscription-form .form-title {
@@ -546,6 +572,9 @@ footer {
     color: var(--text-color);
     padding: 20px 23px;
     text-align: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 300;
 }
 
 footer span a {
@@ -622,6 +651,24 @@ footer span a:hover {
         color: var(--theme-color) !important;
     }
 
+    .navbar .menu {
+        color: #fff;
+
+    }
+
+    .navbar .menu .dropdown-menu {
+        width: 100%;
+    }
+
+    .navbar .menu .dropdown-menu li {
+        width: 100%;
+    }
+
+    .navbar .menu .dropdown-menu li a {
+        padding: 5px 0;
+        margin: 5px 0;
+    }
+
     .home .home-content .text-typing {
         font-size: 70px;
         font-weight: 600;
@@ -670,6 +717,10 @@ footer span a:hover {
         margin-bottom: 35px;
     }
 
+    .modal-content {
+        max-width: 400px;
+    }
+
 }
 
 @media (max-width: 690px) {
@@ -695,8 +746,14 @@ footer span a:hover {
         margin-bottom: 20px;
     }
 
+    .modal .close {
+        top: 0;
+        right: 8px;
+        color: var(--theme-color);
+    }
+
     .modal-content {
-        max-width: 400px;
+        max-width: 350px;
     }
 
 }
@@ -723,4 +780,5 @@ footer span a:hover {
     .newsletter .newsLatter-title {
         font-size: 32px;
     }
+
 }
